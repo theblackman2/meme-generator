@@ -1,6 +1,5 @@
 import './Body.css'
 import React from 'react'
-import Data from './../../data'
 
 function Body() {
   const [meme, setMeme] = React.useState({
@@ -9,9 +8,17 @@ function Body() {
     randomImageUrl : "http://i.imgflip.com/1bij.jpg",
   })
 
+  const [allMemes, setAllMemes] = React.useState([])
+
+  React.useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(res => res.json())
+      .then(memes => setAllMemes(memes.data.memes))
+  }, [])
+
   const getRandomImage = () => {
-    const random = Math.floor(Math.random() * Data.length)
-    const randomUrl = Data[random].url
+    const random = Math.floor(Math.random() * allMemes.length)
+    const randomUrl = allMemes[random].url
     setMeme((prevMeme) => {
       return {
         ...prevMeme,
