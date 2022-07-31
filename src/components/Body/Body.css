@@ -1,0 +1,29 @@
+.body{
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.inputs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputs input{
+  width: 40%;
+  height: 35px;
+  padding: 12px;
+}
+
+.generate{
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px;
+}
