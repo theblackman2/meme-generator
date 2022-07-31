@@ -1,0 +1,40 @@
+.header{
+  height: 65px;
+  width: 100%;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo img{
+  width: 31px;
+}
+
+.logo h2{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.head-aside h3{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 580px){
+  .logo h2{
+    font-size: 18px;
+  }
+
+  .head-aside h3{
+    font-size: 16px;
+  }
+}
